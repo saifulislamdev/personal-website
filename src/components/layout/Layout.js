@@ -1,13 +1,16 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import Container from 'react-bootstrap/Container';
 
 const Layout = ({ children }) => {
   return (
     <>
       <Header />
       <main>
-        <div>{children}</div>
+        <Container>
+          <div>{children}</div>
+        </Container>
       </main>
       <Footer />
     </>
