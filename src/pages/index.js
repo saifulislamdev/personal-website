@@ -1,6 +1,8 @@
 import * as React from 'react';
 import Layout from '../components/layout/Layout';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 // const pageStyles = {
 //   color: "#232129",
 //   padding: 96,
