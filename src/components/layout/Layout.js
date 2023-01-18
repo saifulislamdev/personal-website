@@ -1,7 +1,7 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container';
 import Header from './Header';
 import Footer from './Footer';
-import Container from 'react-bootstrap/Container';
 
 const Layout = ({ children }) => {
   return (
