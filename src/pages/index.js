@@ -23,6 +23,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { siteMetadata } from '../../gatsby-config';
 
+const Section = ({ children }) => {
+  return (
+    <section className='my-4'>
+      <Container>{children}</Container>
+    </section>
+  );
+};
+
 const IndexPage = () => {
   const heroIcons = [
     {
@@ -77,6 +85,8 @@ const IndexPage = () => {
     },
   ];
 
+  const sectionBodyClasses = ['mt-3'].join(' ');
+
   return (
     <>
       <Header />
@@ -123,22 +133,22 @@ const IndexPage = () => {
           </div>
         </div>
       </div>
-      <Container>
-        <Row className='mt-5'>
-          <div className='d-flex justify-content-center align-items-center'>
-            <div>
-              <h2 className='mx-2 text-end'>Hi, I'm Saiful</h2>
-            </div>
-            <div className='mx-2 col-md-1 text-start'>
-              <StaticImage
-                src='../images/me.jpg'
-                className='rounded-circle img-fluid'
-                placeholder='blurred'
-                alt='A photo of Saiful'
-              />
-            </div>
+      <Section>
+        <div className='d-flex justify-content-center align-items-center'>
+          <div>
+            <h2 className='mx-2 text-end'>Hi, I'm Saiful</h2>
           </div>
-          <p className='mt-3'>
+          <div className='mx-2 col-md-1 text-start'>
+            <StaticImage
+              src='../images/me.jpg'
+              className='rounded-circle img-fluid'
+              placeholder='blurred'
+              alt='A photo of Saiful'
+            />
+          </div>
+        </div>
+        <div className={sectionBodyClasses}>
+          <p>
             I graduated from The City College of New York in Fall 2022 with a
             B.S. in Computer Science. I have a great passion for software
             development as I love problem-solving and bringing to life new
@@ -147,10 +157,12 @@ const IndexPage = () => {
             With my strong communication and problem-solving skills, I have what
             it takes to succeed.
           </p>
-        </Row>
-        <Row className='mt-5 text-center'>
+        </div>
+      </Section>
+      <Section>
+        <div className='text-center'>
           <h2>I am skilled 👨🏽‍💻</h2>
-          <div className='mt-3'>
+          <div className={sectionBodyClasses}>
             {skillsIcons.map((skill) => {
               return (
                 <FontAwesomeIcon
@@ -161,8 +173,8 @@ const IndexPage = () => {
               );
             })}
           </div>
-        </Row>
-      </Container>
+        </div>
+      </Section>
       {/* Express, C/C++, and SQL.  */}
     </>
   );
