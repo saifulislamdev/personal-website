@@ -12,8 +12,7 @@ const Header = () => {
 
   const pageName = getPageName();
 
-  return (
-    // <Navbar expand='lg'>
+  const regularNavbar = (
     <Navbar>
       <Container>
         <Navbar.Brand href='/'>Saiful Islam</Navbar.Brand>
@@ -35,6 +34,8 @@ const Header = () => {
       </Container>
     </Navbar>
   );
+
+  return pageName === '' ? <></> : regularNavbar;
 };
 
 export default Header;

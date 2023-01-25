@@ -18,6 +18,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 import Header from '../components/layout/Header';
+import Projects from '../components/project/Projects';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -85,7 +86,7 @@ const IndexPage = () => {
     },
   ];
 
-  const sectionBodyClasses = ['mt-3'].join(' ');
+  const sectionBodyClasses = ['py-3'].join(' ');
 
   return (
     <>
@@ -148,7 +149,7 @@ const IndexPage = () => {
           </div>
         </div>
         <div className={sectionBodyClasses}>
-          <p>
+          <p className='mb-0'>
             I graduated from The City College of New York in Fall 2022 with a
             B.S. in Computer Science. I have a great passion for software
             development as I love problem-solving and bringing to life new
@@ -172,10 +173,18 @@ const IndexPage = () => {
                 ></FontAwesomeIcon>
               );
             })}
+            {/* TODO: Express, C/C++, and SQL.  */}
           </div>
         </div>
       </Section>
-      {/* Express, C/C++, and SQL.  */}
+      <Section>
+        <div className='mb-5 text-center'>
+          <h2>Some projects I worked on 💼</h2>
+          <div className={sectionBodyClasses}>
+            <Projects count={2} />
+          </div>
+        </div>
+      </Section>
     </>
   );
 };

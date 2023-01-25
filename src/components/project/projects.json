@@ -1,0 +1,130 @@
+{
+	"projects":[
+	  {
+		"name":"BudCode",
+		"description":[
+		  "There is a lack of access for resume builders (e.g. college students and new grads) to gain experience working in software development group environments. Not everyone has the network to work with others, so finding new people to work with will help all parties grow and gain more experience. This will also help these developers in landing job opportunities due to how important previous projects are for employers, especially projects done in team environments.",
+		  "BudCode is an online platform that allows software developers, at any level (novice students to seasoned professionals), to connect and collaborate.",
+		  "I primarily worked on the REST API, but assisted the frontend team where necessary.",
+		  "For more information, visit the homepage of BudCode."
+		],
+		"links":[
+		  {
+			"name":"deployed site",
+			"url":"https://budcode.netlify.app/",
+			"type":"site"
+		  },
+		  {
+			"name": "GitHub (backend) repo",
+			"url": "https://github.com/saifulislamdev/budcode-backend",
+			"type": "GitHub"
+		  }
+		],
+		"teamSize":4,
+		"mainStack":[
+		  "React",
+		  "Node.js",
+		  "Express.js",
+		  "PostgreSQL"
+		],
+		"otherStack":[
+		  "JavaScript",
+		  "HTML",
+		  "CSS",
+		  "Bootstrap",
+		  "Git",
+		  "GitHub"
+		],
+		"img":"budcode.png",
+		"note":"When visiting the site, it may take some time to load, especially when the site hasn't been visited in a while. Being in the free tier comes with a price."
+	  },
+	  {
+		"name":"Sylica",
+		"description":"Sylica is an e-commerce platform for electronic devices. I primarily worked on the frontend service of the application.",
+		"links":[
+		  {
+			"name":"site",
+			"url":"https://sylica.netlify.app/",
+			"type":"site"
+		  },
+		  {
+			"name":"GitHub (frontend) repo",
+			"url":"https://github.com/saifulislamdev/sylica-frontend",
+			"type": "GitHub"
+		  }
+		],
+		"teamSize":4,
+		"mainStack":[
+		  "React"
+		],
+		"otherStack":[
+		  "JavaScript",
+		  "HTML",
+		  "CSS",
+		  "Chakra UI",
+		  "Jest",
+		  "Git",
+		  "GitHub",
+		  "JIRA",
+		  "Confluence",
+		  "Figma"
+		],
+		"img":"sylica.png",
+		"note":"When visiting the site, it may take some time to load, especially when the site hasn't been visited in a while. Being in the free tier comes with a price."
+	  },
+	  {
+		"name":"Gamedia",
+		"description":"A social media site for gamers",
+		"teamSize":2
+	  },
+	  {
+		"name":"Collegefulbar",
+		"description":"Basic student management system for colleges and universities where students and instructors can manage their classes effortlessly and administrators can manage courses, classes, students, and more",
+		"teamSize":2
+	  },
+	  {
+		"name":"Instagram Insights [EOL]",
+		"description":"Using account data to reveal insights of a user's Instagram account",
+		"teamSize":1
+	  },
+	  {
+		"name":"machine-learning",
+		"description":"My coursework for CSc 44700 - Intro to Machine Learning at The City College of New York Fall 2022",
+		"teamSize":1
+	  },
+	  {
+		"name":"artificial-intelligence",
+		"description":"Coursework for CSc 44800 - Artificial Intelligence at The City College of New York Spring 2022",
+		"teamSize":1
+	  },
+	  {
+		"name":"NeuralNetworkLAndH",
+		"description":"Array-based neural network for identifying characters L and H",
+		"teamSize":3
+	  },
+	  {
+		"name":"GroupMaker",
+		"description":[
+		  "During my time at All Star Code, I noticed we were often being placed in groups.",
+		  "I created this program that converts a list of names from user input to random groups based on user preference."
+		],
+		"teamSize":1
+	  },
+	  {
+		"name":"Braille Translator 1 ANDDDD 2",
+		"description":[
+		  "This project was my team's submission for HackCooper2019. For most of us, it was our first hackathon.",
+		  "Our idea was to create a website that converts books written in English to books written in braille and contains a library of books already written in braille. In order to do this, we created braille translators (one in C++ and the other in HTML, JavaScript, and CSS).",
+		  "These translators simply convert user input in English to Grade 2 Braille."
+		],
+		"teamSize":4
+	  },
+	  {
+		"name":"My Personal Website",
+		"description":[
+		  "After all, this website is a project, too"
+		],
+		"teamSize":1
+	  }
+	]
+  }
