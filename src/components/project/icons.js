@@ -11,9 +11,21 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { faCloud } from '@fortawesome/free-solid-svg-icons';
 
+export const getMatchingIcon = (technology) => {
+  const matchingIcon = icons.find(
+    (icon) => icon.name.toLowerCase() === technology.toLowerCase()
+  );
+  return matchingIcon;
+};
+
+export const getColor = (technology, defaultColor = '#f8f9fa') => {
+  const matchingIcon = getMatchingIcon(technology);
+  return matchingIcon && matchingIcon.color ? matchingIcon.color : defaultColor;
+};
+
 const icons = [
   {
-    name: 'Javascript',
+    name: 'JavaScript',
     img: faJs,
     color: '#ffde00',
   },
@@ -53,13 +65,69 @@ const icons = [
     color: '#0074bc',
   },
   {
+    name: 'C++',
+    color: '#005ba1',
+  },
+  {
+    name: 'GatsbyJS',
+    color: '#6e2f9f',
+  },
+  {
+    name: 'MySQL',
+    color: '#f28900',
+  },
+  {
     name: 'PostgreSQL',
     color: '#1a6995',
+  },
+  {
+    name: 'sklearn',
+    color: '#ff9305',
+  },
+  {
+    name: 'pandas',
+    color: '#150658',
+  },
+  {
+    name: 'numpy',
+    color: '#3f78d6',
+  },
+  {
+    name: 'matplotlib',
+    color: '#005780',
+  },
+  {
+    name: 'Bootstrap',
+    color: '#9700ff',
+  },
+  {
+    name: 'Chakra UI',
+    color: '#38cdd0',
+  },
+  {
+    name: 'Jest',
+    color: '#a53b5b',
+  },
+  {
+    name: 'Git',
+    color: '#ff3f20',
   },
   {
     name: 'GitHub',
     img: faGithub,
     color: '#7a208e',
+  },
+  {
+    name: 'Figma',
+    color: '#ff3a00',
+  },
+  {
+    name: 'JIRA',
+    color: '#0075f6',
+  },
+  {
+    name: 'Confluence',
+    color: '#0075f6',
   },
   {
     name: 'site',

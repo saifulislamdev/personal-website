@@ -1,7 +1,9 @@
 import * as React from 'react';
+import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
+import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -183,6 +185,9 @@ const IndexPage = () => {
           <div className={sectionBodyClasses}>
             <Projects count={2} />
           </div>
+          <Link to='/projects'>
+            <Button variant='light'>view all my projects</Button>
+          </Link>
         </div>
       </Section>
     </>

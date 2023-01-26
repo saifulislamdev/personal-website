@@ -10,23 +10,9 @@ import {
   faUsers,
   faUserGroup,
 } from '@fortawesome/free-solid-svg-icons';
-import icons from './icons';
+import { getColor, getMatchingIcon } from './icons';
 
 const Project = ({ project, order }) => {
-  const getMatchingIcon = (technology) => {
-    const matchingIcon = icons.find(
-      (icon) => icon.name.toLowerCase() === technology.toLowerCase()
-    );
-    return matchingIcon;
-  };
-
-  const getColor = (technology, defaultColor = '#f8f9fa') => {
-    const matchingIcon = getMatchingIcon(technology);
-    return matchingIcon && matchingIcon.color
-      ? matchingIcon.color
-      : defaultColor;
-  };
-
   const getTeamSizeInfo = (teamSize) => {
     if (teamSize == 1) {
       return {
@@ -51,7 +37,7 @@ const Project = ({ project, order }) => {
   description = Array.isArray(description) ? description : [description]; // convert to array
 
   return name && description ? (
-    <Row className='py-3 d-flex justify-content-center align-items-center'>
+    <Row className='py-3 d-flex'>
       <Col lg>
         {/* <Col lg={{ order: order % 2 ? 'last' : 'first' }}> */}
         {/* <StaticImage
@@ -68,7 +54,7 @@ const Project = ({ project, order }) => {
             mainStack.map((technology) => {
               return (
                 <div
-                  className='my-1 me-1 badge rounded-pill'
+                  className='mb-1 me-1 badge rounded-pill'
                   style={{ backgroundColor: getColor(technology, '#0D6EFD') }}
                 >
                   {technology}
@@ -106,16 +92,14 @@ const Project = ({ project, order }) => {
 
             return linkName ? (
               <div className='pb-2'>
-                <a href={linkUrl}>
-                  <Button style={{ backgroundColor: bgColor }}>
-                    <FontAwesomeIcon
-                      icon={getMatchingIcon(linkType).img}
-                      className='pe-2'
-                      fixedWidth
-                    />
-                    Visit {teamSize && teamSize > 1 ? 'our' : 'the'} {name}
-                  </Button>
-                </a>
+                <Button href={linkUrl} style={{ backgroundColor: bgColor }}>
+                  <FontAwesomeIcon
+                    icon={getMatchingIcon(linkType).img}
+                    className='pe-2'
+                    fixedWidth
+                  />
+                  Visit {teamSize && teamSize > 1 ? 'our' : 'my'} {linkName}
+                </Button>
               </div>
             ) : (
               <></>
