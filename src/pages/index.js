@@ -1,10 +1,10 @@
 import * as React from 'react';
-import Button from 'react-bootstrap/Button';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
+import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -22,19 +22,29 @@ import {
 import Header from '../components/layout/Header';
 import Projects from '../components/project/Projects';
 
+// import { ParallaxProvider } from 'react-scroll-parallax';
+// import { Parallax } from 'react-scroll-parallax';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { siteMetadata } from '../../gatsby-config';
 
-const Section = ({ children }) => {
+const Section = ({ children, style }) => {
   return (
-    <section className='my-4'>
-      <Container>{children}</Container>
+    <section className='py-4' style={style}>
+      {/* <Parallax> */}
+      <Container>
+        <div data-aos='fade-up'>{children}</div>
+      </Container>
+      {/* </Parallax> */}
     </section>
   );
 };
 
 const IndexPage = () => {
+  AOS.init();
+
   const heroIcons = [
     {
       href: `mailto:${siteMetadata.email}`,
@@ -52,37 +62,37 @@ const IndexPage = () => {
 
   const skillsIcons = [
     {
-      skill: 'Javascript',
+      name: 'Javascript',
       img: faJs,
       color: '#ffde00',
     },
     {
-      skill: 'Python',
+      name: 'Python',
       img: faPython,
       color: '#306998',
     },
     {
-      skill: 'Java',
+      name: 'Java',
       img: faJava,
       color: 'orange',
     },
     {
-      skill: 'React',
+      name: 'React',
       img: faReact,
       color: '#00ddff',
     },
     {
-      skill: 'Node',
+      name: 'Node',
       img: faNode,
       color: '#59a953',
     },
     {
-      skill: 'HTML',
+      name: 'HTML',
       img: faHtml5,
       color: '#ff4400',
     },
     {
-      skill: 'CSS',
+      name: 'CSS',
       img: faCss3Alt,
       color: '#0074bc',
     },
@@ -136,50 +146,66 @@ const IndexPage = () => {
           </div>
         </div>
       </div>
-      <Section>
-        <div className='d-flex justify-content-center align-items-center'>
-          <div>
-            <h2 className='mx-2 text-end'>Hi, I'm Saiful</h2>
-          </div>
-          <div className='mx-2 col-md-1 text-start'>
-            <StaticImage
-              src='../images/me.jpg'
-              className='rounded-circle img-fluid'
-              placeholder='blurred'
-              alt='A photo of Saiful'
-            />
-          </div>
-        </div>
-        <div className={sectionBodyClasses}>
-          <p className='mb-0'>
-            I graduated from The City College of New York in Fall 2022 with a
-            B.S. in Computer Science. I have a great passion for software
-            development as I love problem-solving and bringing to life new
-            ideas. Furthermore, I have software engineering experience through
-            my current position, internships, fellowship, and personal projects.
-            With my strong communication and problem-solving skills, I have what
-            it takes to succeed.
-          </p>
-        </div>
+      <Section style={{ backgroundColor: 'white' }}>
+        <Row className='justify-content-center align-items-center'>
+          <Col>
+            <div className='d-flex justify-content-center align-items-center'>
+              <div>
+                <h2 className='mx-2 text-end'>Hi, I'm Saiful</h2>
+              </div>
+              <div className='mx-2 col-md-2 text-start'>
+                <StaticImage
+                  src='../images/me.jpg'
+                  className='rounded-circle img-fluid'
+                  placeholder='blurred'
+                  alt='A photo of Saiful'
+                />
+              </div>
+            </div>
+          </Col>
+          <Col>
+            <div className={sectionBodyClasses}>
+              <p className='mb-0 fs-5'>
+                I graduated from The City College of New York in Fall 2022 with
+                a B.S. in Computer Science. I have a great passion for software
+                development as I love problem-solving and bringing to life new
+                ideas. Furthermore, I have software engineering experience
+                through my current position, internships, fellowship, and
+                personal projects. With my strong communication and
+                problem-solving skills, I have what it takes to succeed.
+              </p>
+            </div>
+          </Col>
+        </Row>
       </Section>
-      <Section>
+      <Section style={{ backgroundColor: '#faf8f7' }}>
         <div className='text-center'>
           <h2>I am skilled 👨🏽‍💻</h2>
           <div className={sectionBodyClasses}>
             {skillsIcons.map((skill) => {
               return (
-                <FontAwesomeIcon
-                  className='fa-3x px-3'
-                  icon={skill.img}
-                  style={{ color: skill.color }}
-                ></FontAwesomeIcon>
+                <Row
+                  xs={6}
+                  className='my-3 justify-content-center align-items-center'
+                >
+                  <Col xs={1} className='text-center'>
+                    <FontAwesomeIcon
+                      className='fa-3x'
+                      icon={skill.img}
+                      style={{ color: skill.color }}
+                    />
+                  </Col>
+                  <Col xs={1} className='ps-0 text-start'>
+                    <p className='mb-0'>{skill.name}</p>
+                  </Col>
+                </Row>
               );
             })}
             {/* TODO: Express, C/C++, and SQL.  */}
           </div>
         </div>
       </Section>
-      <Section>
+      <Section style={{ backgroundColor: 'white' }}>
         <div className='mb-5 text-center'>
           <h2>Some projects I worked on 💼</h2>
           <div className={sectionBodyClasses}>

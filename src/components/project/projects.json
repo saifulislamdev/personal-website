@@ -36,7 +36,7 @@
 		  "GitHub"
 		],
 		"img":"budcode.png",
-		"note":"When visiting the site, it may take some time to load, especially when the site hasn't been visited in a while. Being in the free tier comes with a price."
+		"note":"When visiting the site, it may take some time for the first request to process, especially when the site hasn't been visited in a while. Being in the free tier comes with a price."
 	  },
 	  {
 		"name":"Sylica",
@@ -70,7 +70,7 @@
 		  "Figma"
 		],
 		"img":"sylica.png",
-		"note":"When visiting the site, it may take some time to load, especially when the site hasn't been visited in a while. Being in the free tier comes with a price."
+		"note":"When visiting the site, it may take some time for the first request to process, especially when the site hasn't been visited in a while. Being in the free tier comes with a price."
 	  },
 	  {
 		"name":"Gamedia",
