@@ -6,20 +6,18 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import {
   faCss3Alt,
-  faGithub,
   faHtml5,
   faJava,
   faJs,
-  faLinkedinIn,
   faNode,
   faPython,
   faReact,
 } from '@fortawesome/free-brands-svg-icons';
 
 import Header from '../components/layout/Header';
+import HeroIcons from '../components/home/HeroIcons';
 import Projects from '../components/project/Projects';
 
 // import { ParallaxProvider } from 'react-scroll-parallax';
@@ -27,8 +25,6 @@ import Projects from '../components/project/Projects';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-import { siteMetadata } from '../../gatsby-config';
 
 const Section = ({ children, style }) => {
   return (
@@ -44,21 +40,6 @@ const Section = ({ children, style }) => {
 
 const IndexPage = () => {
   AOS.init();
-
-  const heroIcons = [
-    {
-      href: `mailto:${siteMetadata.email}`,
-      img: faEnvelope,
-    },
-    {
-      href: 'https://www.linkedin.com/in/saiful-i/',
-      img: faLinkedinIn,
-    },
-    {
-      href: 'https://github.com/saifulislamdev',
-      img: faGithub,
-    },
-  ];
 
   const skillsIcons = [
     {
@@ -128,21 +109,7 @@ const IndexPage = () => {
           <div className='align-self-center text-center'>
             <h1 className='display-1'>Saiful Islam</h1>
             <p className='lead fs-3'>Software Engineer</p>
-            {/* <Col> */}
-            {heroIcons.map((icon) => {
-              return (
-                <a
-                  href={icon.href}
-                  target='_blank'
-                  style={{ color: 'inherit' }}
-                >
-                  <FontAwesomeIcon
-                    className='fa-2x px-2'
-                    icon={icon.img}
-                  ></FontAwesomeIcon>
-                </a>
-              );
-            })}
+            <HeroIcons />
           </div>
         </div>
       </div>
@@ -196,7 +163,7 @@ const IndexPage = () => {
                     />
                   </Col>
                   <Col xs={1} className='ps-0 text-start'>
-                    <p className='mb-0'>{skill.name}</p>
+                    <p className='mb-0 fs-5'>{skill.name}</p>
                   </Col>
                 </Row>
               );
