@@ -5,16 +5,6 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faCss3Alt,
-  faHtml5,
-  faJava,
-  faJs,
-  faNode,
-  faPython,
-  faReact,
-} from '@fortawesome/free-brands-svg-icons';
 
 import Header from '../components/layout/Header';
 import HeroIcons from '../components/home/HeroIcons';
@@ -25,6 +15,7 @@ import Projects from '../components/project/Projects';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Skills from '../components/home/Skills';
 
 const Section = ({ children, style }) => {
   return (
@@ -40,44 +31,6 @@ const Section = ({ children, style }) => {
 
 const IndexPage = () => {
   AOS.init();
-
-  const skillsIcons = [
-    {
-      name: 'Javascript',
-      img: faJs,
-      color: '#ffde00',
-    },
-    {
-      name: 'Python',
-      img: faPython,
-      color: '#306998',
-    },
-    {
-      name: 'Java',
-      img: faJava,
-      color: 'orange',
-    },
-    {
-      name: 'React',
-      img: faReact,
-      color: '#00ddff',
-    },
-    {
-      name: 'Node',
-      img: faNode,
-      color: '#59a953',
-    },
-    {
-      name: 'HTML',
-      img: faHtml5,
-      color: '#ff4400',
-    },
-    {
-      name: 'CSS',
-      img: faCss3Alt,
-      color: '#0074bc',
-    },
-  ];
 
   const sectionBodyClasses = ['py-3'].join(' ');
 
@@ -149,26 +102,7 @@ const IndexPage = () => {
         <div className='text-center'>
           <h2>I am skilled 👨🏽‍💻</h2>
           <div className={sectionBodyClasses}>
-            {skillsIcons.map((skill) => {
-              return (
-                <Row
-                  xs={6}
-                  className='my-3 justify-content-center align-items-center'
-                >
-                  <Col xs={1} className='text-center'>
-                    <FontAwesomeIcon
-                      className='fa-3x'
-                      icon={skill.img}
-                      style={{ color: skill.color }}
-                    />
-                  </Col>
-                  <Col xs={1} className='ps-0 text-start'>
-                    <p className='mb-0 fs-5'>{skill.name}</p>
-                  </Col>
-                </Row>
-              );
-            })}
-            {/* TODO: Express, C/C++, and SQL.  */}
+            <Skills />
           </div>
         </div>
       </Section>
