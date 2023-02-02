@@ -2,6 +2,7 @@ import * as React from 'react';
 import Row from 'react-bootstrap/Row';
 import Projects from '../components/project/Projects';
 import Layout from '../components/layout/Layout';
+import Wrapper from '../components/layout/Wrapper';
 import { projects } from '../components/project/projects.json';
 import { getColor } from '../components/project/icons';
 
@@ -27,23 +28,25 @@ const ProjectsPage = () => {
   const uniqueTechnologiesSorted = getUniqueTechnologiesSorted();
 
   return (
-    <Layout>
-      <h1 className='text-center'>My Projects</h1>
-      <div>
-        {uniqueTechnologiesSorted &&
-          uniqueTechnologiesSorted.map((technology) => {
-            return (
-              <div
-                className='mb-1 me-1 badge rounded-pill'
-                style={{ backgroundColor: getColor(technology, '#0D6EFD') }}
-              >
-                {technology}
-              </div>
-            );
-          })}
-      </div>
-      <Projects />
-    </Layout>
+    <Wrapper>
+      <Layout>
+        <h1 className='text-center'>My Projects</h1>
+        <div>
+          {uniqueTechnologiesSorted &&
+            uniqueTechnologiesSorted.map((technology) => {
+              return (
+                <div
+                  className='mb-1 me-1 badge rounded-pill'
+                  style={{ backgroundColor: getColor(technology, '#0D6EFD') }}
+                >
+                  {technology}
+                </div>
+              );
+            })}
+        </div>
+        <Projects />
+      </Layout>
+    </Wrapper>
   );
 };
 

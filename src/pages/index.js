@@ -10,13 +10,10 @@ import Header from '../components/layout/Header';
 import HeroIcons from '../components/home/HeroIcons';
 import Skills from '../components/home/Skills';
 import Projects from '../components/project/Projects';
+import Wrapper from '../components/layout/Wrapper';
 
 // import { ParallaxProvider } from 'react-scroll-parallax';
 // import { Parallax } from 'react-scroll-parallax';
-import '../styles/animations.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 const Section = ({ children, style }) => {
   return (
@@ -31,12 +28,10 @@ const Section = ({ children, style }) => {
 };
 
 const IndexPage = () => {
-  AOS.init();
-
   const sectionBodyClasses = ['py-3'].join(' ');
 
   return (
-    <>
+    <Wrapper>
       <Header />
       <div className='vh-100' style={{ display: 'grid' }}>
         <StaticImage
@@ -124,7 +119,7 @@ const IndexPage = () => {
           </Link>
         </div>
       </Section>
-    </>
+    </Wrapper>
   );
 };
 
