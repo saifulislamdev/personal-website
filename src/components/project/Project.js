@@ -32,7 +32,8 @@ const Project = ({ project, order }) => {
     }
   };
 
-  let { name, description, links, mainStack, teamSize, note } = project;
+  let { name, description, links, mainStack, otherStack, teamSize, note } =
+    project;
   const { icon: teamIcon, msg: teamMsg } = getTeamSizeInfo(teamSize);
   description = Array.isArray(description) ? description : [description]; // convert to array
 
@@ -49,19 +50,51 @@ const Project = ({ project, order }) => {
         <h3>{name}</h3>
       </Col>
       <Col className='text-start' lg>
-        <div className='pb-1'>
-          {mainStack &&
-            mainStack.map((technology) => {
-              return (
-                <div
-                  className='mb-1 me-1 badge rounded-pill'
-                  style={{ backgroundColor: getColor(technology, '#0D6EFD') }}
-                >
-                  {technology}
-                </div>
-              );
-            })}
-        </div>
+        {mainStack && (
+          <Row>
+            {otherStack && (
+              <Col xs={2}>
+                <p className='m-0'>Main Stack</p>
+              </Col>
+            )}
+            <Col>
+              {mainStack.map((technology) => {
+                return (
+                  <div
+                    className='mb-1 me-1 badge rounded-pill'
+                    style={{
+                      backgroundColor: getColor(technology, '#0D6EFD'),
+                    }}
+                  >
+                    {technology}
+                  </div>
+                );
+              })}
+            </Col>
+          </Row>
+        )}
+        {otherStack && (
+          <Row className='pb-2'>
+            <Col xs={2}>
+              <p className='m-0'>Other</p>
+            </Col>
+            <Col>
+              {otherStack &&
+                otherStack.map((technology) => {
+                  return (
+                    <div
+                      className='mb-1 me-1 badge rounded-pill'
+                      style={{
+                        backgroundColor: getColor(technology, '#0D6EFD'),
+                      }}
+                    >
+                      {technology}
+                    </div>
+                  );
+                })}
+            </Col>
+          </Row>
+        )}
         {/* <div className='pb-1 d-flex align-items-center'>
           <div>
             <FontAwesomeIcon
@@ -92,7 +125,10 @@ const Project = ({ project, order }) => {
 
             return linkName ? (
               <div className='pb-2'>
-                <Button href={linkUrl} style={{ backgroundColor: bgColor }}>
+                <Button
+                  href={linkUrl}
+                  style={{ border: 0, backgroundColor: bgColor }}
+                >
                   <FontAwesomeIcon
                     icon={getMatchingIcon(linkType).img}
                     className='pe-2'
