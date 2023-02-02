@@ -8,14 +8,15 @@ import Row from 'react-bootstrap/Row';
 
 import Header from '../components/layout/Header';
 import HeroIcons from '../components/home/HeroIcons';
+import Skills from '../components/home/Skills';
 import Projects from '../components/project/Projects';
 
 // import { ParallaxProvider } from 'react-scroll-parallax';
 // import { Parallax } from 'react-scroll-parallax';
+import '../styles/animations.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Skills from '../components/home/Skills';
 
 const Section = ({ children, style }) => {
   return (
@@ -61,7 +62,11 @@ const IndexPage = () => {
           {/* Any content here will be centered in the component */}
           <div className='align-self-center text-center'>
             <h1 className='display-1'>Saiful Islam</h1>
-            <p className='lead fs-3'>Software Engineer</p>
+            <p className='lead fs-3 shine'>
+              {'Software Engineer'.split('').map((char) => {
+                return <span>{char}</span>;
+              })}
+            </p>
             <HeroIcons />
           </div>
         </div>
@@ -113,7 +118,9 @@ const IndexPage = () => {
             <Projects count={2} />
           </div>
           <Link to='/projects'>
-            <Button variant='light'>view all my projects</Button>
+            <Button variant='light' style={{ border: 0 }}>
+              view all my projects
+            </Button>
           </Link>
         </div>
       </Section>
