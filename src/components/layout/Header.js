@@ -16,7 +16,7 @@ const Header = () => {
     <Navbar>
       <Container>
         <Navbar.Brand href='/'>Saiful Islam</Navbar.Brand>
-        <Navbar.Toggle aria-controls='basic-navbar-nav' />
+        {/* <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse className='justify-content-end'>
           <Nav variant='pills' activeKey={pageName}>
             <Nav.Item>
@@ -30,7 +30,7 @@ const Header = () => {
               </Nav.Link>
             </Nav.Item>
           </Nav>
-        </Navbar.Collapse>
+        </Navbar.Collapse> */}
       </Container>
     </Navbar>
   );
