@@ -32,7 +32,7 @@ const Project = ({ project, order }) => {
     }
   };
 
-  let { name, description, links, mainStack, otherStack, teamSize, note } =
+  let { name, description, img, links, mainStack, otherStack, teamSize, note } =
     project;
   const { icon: teamIcon, msg: teamMsg } = getTeamSizeInfo(teamSize);
   description = Array.isArray(description) ? description : [description]; // convert to array
@@ -54,7 +54,7 @@ const Project = ({ project, order }) => {
           <Row>
             {otherStack && (
               <Col xs={2}>
-                <p className='m-0'>Main Stack</p>
+                <p className='m-0'>Main</p>
               </Col>
             )}
             <Col>
@@ -127,7 +127,11 @@ const Project = ({ project, order }) => {
               <div className='pb-2'>
                 <Button
                   href={linkUrl}
-                  style={{ border: 0, backgroundColor: bgColor }}
+                  style={{
+                    border: 0,
+                    backgroundColor: bgColor,
+                    textAlign: 'left',
+                  }}
                 >
                   <FontAwesomeIcon
                     icon={getMatchingIcon(linkType).img}
