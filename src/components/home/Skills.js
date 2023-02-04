@@ -55,18 +55,15 @@ const Skills = () => {
     <>
       {icons.map((icon) => {
         return (
-          <Row
-            xs={6}
-            className='my-3 justify-content-center align-items-center'
-          >
-            <Col xs={1} className='text-center'>
+          <Row className='my-3 justify-content-center align-items-center'>
+            <Col className='text-end'>
               <FontAwesomeIcon
                 className='fa-3x'
                 icon={icon.img}
                 style={{ color: icon.color }}
               />
             </Col>
-            <Col xs={1} className='ps-0 text-start'>
+            <Col className='text-start'>
               <p className='mb-0 fs-5'>{icon.name}</p>
             </Col>
           </Row>
