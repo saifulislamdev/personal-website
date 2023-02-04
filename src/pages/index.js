@@ -68,12 +68,12 @@ const IndexPage = () => {
       </div>
       <Section style={{ backgroundColor: 'white' }}>
         <Row className='justify-content-center align-items-center'>
-          <Col>
+          <Col lg>
             <div className='d-flex justify-content-center align-items-center'>
               <div>
                 <h2 className='mx-2 text-end'>Hi, I'm Saiful</h2>
               </div>
-              <div className='mx-2 col-md-2 text-start'>
+              <div className='mx-2 col-md-3 text-start'>
                 <StaticImage
                   src='../images/me.jpg'
                   className='rounded-circle img-fluid'
@@ -83,7 +83,7 @@ const IndexPage = () => {
               </div>
             </div>
           </Col>
-          <Col>
+          <Col lg>
             <div className={sectionBodyClasses}>
               <p className='mb-0 fs-5'>
                 I graduated from The City College of New York in Fall 2022 with
