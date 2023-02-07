@@ -47,7 +47,6 @@ const IndexPage = () => {
           style={{
             zIndex: 1,
             position: 'absolute',
-            top: '5px',
             right: '10px',
           }}
         >
