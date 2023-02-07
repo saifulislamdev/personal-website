@@ -6,23 +6,21 @@ import { projects } from './projects.json';
 
 const Projects = ({ count }) => {
   const numProjectsDisplayed = count || projects.length;
+  const projectsToDisplay = projects.slice(0, numProjectsDisplayed);
 
   return (
     <>
-      {projects.slice(0, numProjectsDisplayed).map((project, i) => {
-        return <Project project={project} order={i} />;
+      {projectsToDisplay.map((project, i) => {
+        return (
+          <div data-aos='fade-up'>
+            <Project project={project} order={i} />
+          </div>
+        );
       })}
     </>
   );
 };
 
-// TODO: install sharp (and go over doc)
-// TODO: try to open graphql locally and learn it
-// TODO: go over code for importing img
-// TODO: commit code
-// TODO: work on projects page
-// TODO: work on animations
-// TODO: deploy
 export default Projects;
 
 // export const pageQuery = graphql`
