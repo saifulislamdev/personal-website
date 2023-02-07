@@ -38,7 +38,7 @@ const Project = ({ project, order }) => {
   description = Array.isArray(description) ? description : [description]; // convert to array
 
   return name && description ? (
-    <Row className='py-3 d-flex'>
+    <Row className='py-3 justify-content-center align-items-center'>
       <Col lg>
         {/* <Col lg={{ order: order % 2 ? 'last' : 'first' }}> */}
         {/* <StaticImage
@@ -47,9 +47,18 @@ const Project = ({ project, order }) => {
                 formats={['auto', 'webp', 'avif']}
                 alt={`${project.name} logo`}
               /> */}
-        <h3>{name}</h3>
+        <img
+          src={`../../${img}`}
+          className='img-fluid'
+          // placeholder='blurred'
+          // formats={['auto', 'webp', 'avif']}
+          alt={`${name} logo`}
+        />
       </Col>
       <Col className='text-start' lg>
+        <Row>
+          <h3 className='text-start'>{name}</h3>
+        </Row>
         {mainStack && (
           <Row>
             {otherStack && (
