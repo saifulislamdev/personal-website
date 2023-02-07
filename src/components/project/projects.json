@@ -5,8 +5,7 @@
 		"description":[
 		  "There is a lack of access for resume builders (e.g. college students and new grads) to gain experience working in software development group environments. Not everyone has the network to work with others, so finding new people to work with will help all parties grow and gain more experience. This will also help these developers in landing job opportunities due to how important previous projects are for employers, especially projects done in team environments.",
 		  "BudCode is an online platform that allows software developers, at any level (novice students to seasoned professionals), to connect and collaborate.",
-		  "I primarily worked on the REST API, but assisted the frontend team where necessary.",
-		  "For more information, visit the homepage of BudCode."
+		  "I primarily worked on the REST API, but assisted the frontend team where necessary."
 		],
 		"links":[
 		  {
@@ -269,7 +268,7 @@
 			"HTML",
 			"CSS"
 		], 
-		"img": ""
+		"img": "my-personal-website.png"
 	  }
 	]
   }

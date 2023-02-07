@@ -32,16 +32,15 @@ const IndexPage = () => {
 
   return (
     <Wrapper>
-      <Header />
       <div className='vh-100' style={{ display: 'grid' }}>
         <StaticImage
           style={{
             gridArea: '1/1',
-            opacity: '0.2',
+            opacity: '0.15',
           }}
           layout='fullWidth'
           alt=''
-          src='../images/hero.jpg'
+          src='../../static/hero.jpg'
           formats={['auto', 'webp', 'avif']}
         />
         <div
@@ -52,6 +51,7 @@ const IndexPage = () => {
             // This centers the other elements inside the hero component
             placeItems: 'center',
             display: 'grid',
+            // backgroundColor: '#faf8f7',
           }}
         >
           {/* Any content here will be centered in the component */}
@@ -75,7 +75,7 @@ const IndexPage = () => {
               </div>
               <div className='mx-2 col-md-3 text-start'>
                 <StaticImage
-                  src='../images/me.jpg'
+                  src='../../static/me.jpg'
                   className='rounded-circle img-fluid'
                   placeholder='blurred'
                   alt='A photo of Saiful'
@@ -98,7 +98,7 @@ const IndexPage = () => {
           </Col>
         </Row>
       </Section>
-      <Section style={{ backgroundColor: '#faf8f7' }}>
+      <Section style={{ backgroundColor: '#efecec' }}>
         <div className='text-center'>
           <h2>I am skilled 👨🏽‍💻</h2>
           <div className={sectionBodyClasses}>
