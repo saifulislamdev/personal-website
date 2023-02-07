@@ -17,13 +17,13 @@ import Wrapper from '../components/layout/Wrapper';
 
 const Section = ({ id, children, style }) => {
   return (
-    <section id={id} className='py-4' style={style}>
-      {/* <Parallax> */}
-      <Container>
-        <div data-aos='fade-up'>{children}</div>
-      </Container>
-      {/* </Parallax> */}
-    </section>
+    <div data-aos='fade-up'>
+      <section id={id} className='py-4' style={style}>
+        {/* <Parallax> */}
+        <Container>{children}</Container>
+        {/* </Parallax> */}
+      </section>
+    </div>
   );
 };
 
