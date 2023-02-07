@@ -15,9 +15,9 @@ import Wrapper from '../components/layout/Wrapper';
 // import { ParallaxProvider } from 'react-scroll-parallax';
 // import { Parallax } from 'react-scroll-parallax';
 
-const Section = ({ children, style }) => {
+const Section = ({ id, children, style }) => {
   return (
-    <section className='py-4' style={style}>
+    <section id={id} className='py-4' style={style}>
       {/* <Parallax> */}
       <Container>
         <div data-aos='fade-up'>{children}</div>
@@ -45,6 +45,16 @@ const IndexPage = () => {
         />
         <div
           style={{
+            zIndex: 1,
+            position: 'absolute',
+            top: '5px',
+            right: '10px',
+          }}
+        >
+          <Header />
+        </div>
+        <div
+          style={{
             // By using the same grid area for both, they are stacked on top of each other
             gridArea: '1/1',
             position: 'relative',
@@ -66,7 +76,7 @@ const IndexPage = () => {
           </div>
         </div>
       </div>
-      <Section style={{ backgroundColor: 'white' }}>
+      <Section id='about-me' style={{ backgroundColor: 'white' }}>
         <Row className='justify-content-center align-items-center'>
           <Col lg>
             <div className='d-flex justify-content-center align-items-center'>
@@ -98,7 +108,7 @@ const IndexPage = () => {
           </Col>
         </Row>
       </Section>
-      <Section style={{ backgroundColor: '#efecec' }}>
+      <Section id='skills' style={{ backgroundColor: '#efecec' }}>
         <div className='text-center'>
           <h2>I am skilled 👨🏽‍💻</h2>
           <div className={sectionBodyClasses}>
@@ -106,7 +116,7 @@ const IndexPage = () => {
           </div>
         </div>
       </Section>
-      <Section style={{ backgroundColor: 'white' }}>
+      <Section id='projects' style={{ backgroundColor: 'white' }}>
         <div className='mb-5 text-center'>
           <h2>Some projects I worked on 💼</h2>
           <div className={sectionBodyClasses}>
