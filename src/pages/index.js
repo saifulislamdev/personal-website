@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
-import Header from '../components/layout/Header';
+import Header from '../components/layout/HomeNavbar';
 import HeroIcons from '../components/home/HeroIcons';
 import Skills from '../components/home/Skills';
 import Projects from '../components/project/Projects';
