@@ -39,7 +39,7 @@ const Project = ({ project, order }) => {
 
   return name && description ? (
     <Row className='py-3 justify-content-center align-items-center'>
-      <Col lg>
+      <Col lg className='text-center'>
         {/* <Col lg={{ order: order % 2 ? 'last' : 'first' }}> */}
         {/* <StaticImage
                 src={`../../images/${project.img}`}

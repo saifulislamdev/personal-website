@@ -191,7 +191,7 @@
 		"img": "neural-network-l-and-h.png"
 	  },
 	  {
-		"name":"Braille Translator",
+		"name":"Brindle",
 		"description":[
 		  "This project was my team's submission for HackCooper2019. For most of us, it was our first hackathon.",
 		  "Our idea was to create a website that converts books written in English to books written in braille and contains a library of books already written in braille. In order to do this, we created braille translators (one in C++ and the other in JavaScript, HTML, and CSS).",
@@ -216,7 +216,7 @@
 			"CSS",
 			"C++"
 		],
-		"img": "braille-translator.png"
+		"img": "brindle.png"
 	  },
 	  {
 		"name":"GroupMaker",
