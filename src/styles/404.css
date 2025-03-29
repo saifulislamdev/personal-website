@@ -1,0 +1,23 @@
+.not-found-container {
+  color: #232129;
+  padding: 96px;
+  font-family: -apple-system, Roboto, sans-serif, serif;
+
+  code {
+    color: #8a6534;
+    padding: 4px;
+    background-color: #fff4db;
+    font-size: 1.25rem;
+    border-radius: 4px;
+  }
+}
+
+.not-found-header {
+  margin-top: 0px;
+  margin-bottom: 64px;
+  max-width: 320px;
+}
+
+.not-found-body {
+  margin-bottom: 48px;
+}
