@@ -12,6 +12,8 @@ import Skills from '../components/home/Skills';
 import Projects from '../components/project/Projects';
 import Wrapper from '../components/layout/Wrapper';
 
+import { LINKEDIN_URL } from '../configurations/url';
+
 import '../styles/app.css';
 
 const Section = ({ id, className, children }) => {
@@ -39,7 +41,6 @@ const IndexPage = () => {
           <Header />
         </div>
         <div className='app-intro'>
-          {/* Any content here will be centered in the component */}
           <div className='align-self-center text-center'>
             <h1 className='display-1'>Saiful Islam</h1>
             <p className='lead fs-3 shine'>
@@ -71,13 +72,14 @@ const IndexPage = () => {
           <Col lg>
             <div className='section-body'>
               <p className='mb-0 fs-5'>
-                I graduated from The City College of New York in Fall 2022 with
-                a B.S. in Computer Science. I have a great passion for software
-                development as I love problem-solving and bringing to life new
-                ideas. Furthermore, I have software engineering experience
-                through my current position, internships, fellowship, and
-                personal projects. With my strong communication and
-                problem-solving skills, I have what it takes to succeed.
+                I am passionate about software development, driven by
+                problem-solving and bringing innovative ideas to life. 
+                Along with my technical expertise, I bring strong communication, 
+                adaptability, and critical thinking skills that equip me to excel in 
+                dynamic, collaborative environments, consistently delivering 
+                business value. Furthermore, I have software engineering
+                experience through my current and previous positions. Visit my {' '}
+                <Link to={LINKEDIN_URL} target='_blank'>LinkedIn</Link> for more.
               </p>
             </div>
           </Col>
@@ -93,13 +95,13 @@ const IndexPage = () => {
       </Section>
       <Section className='section-color-secondary' id='projects'>
         <div className='mb-5 text-center'>
-          <h2>Some projects I worked on 💼</h2>
+          <h2>Some projects I worked on during my undergraduate 💼</h2>
           <div className='section-body'>
             <Projects count={2} />
           </div>
-          <Link to='/projects'>
+          <Link to='/undergrad-projects'>
             <Button variant='light' style={{ border: 0 }}>
-              View all my projects
+              View all my undergrad projects
             </Button>
           </Link>
         </div>

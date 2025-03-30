@@ -29,7 +29,7 @@ const ProjectsPage = () => {
   return (
     <Wrapper>
       <Layout>
-        <h1 className='text-center'>My Projects</h1>
+        <h1 className='text-center'>My Undergraduate Projects</h1>
         <div>
           {uniqueTechnologiesSorted &&
             uniqueTechnologiesSorted.map((technology) => {

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { LINKEDIN_URL } from '../../configurations/url';
 import { siteMetadata } from '../../../gatsby-config';
 
 const HeroIcons = () => {
@@ -18,7 +19,7 @@ const HeroIcons = () => {
       onHoverColor: '#ff2826',
     },
     linkedin: {
-      href: 'https://www.linkedin.com/in/saiful-i/',
+      href: LINKEDIN_URL,
       img: faLinkedinIn,
       onHoverColor: '#0077b9',
     },

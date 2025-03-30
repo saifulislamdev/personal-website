@@ -3,7 +3,7 @@
 	  {
 		"name":"BudCode",
 		"descriptionLines":[
-		  "There is a lack of access for resume builders (e.g. college students and new grads) to gain experience working in software development group environments. Not everyone has the network to work with others, so finding new people to work with will help all parties grow and gain more experience. This will also help these developers in landing job opportunities due to how important previous projects are for employers, especially projects done in team environments.",
+		  "There is a lack of access for resume builders (e.g. college students and new grads) to gain experience working in software development group environments. Not everyone has the network to work with others, so finding new people to work with will help all parties grow and gain more experience. This will also help these developers in landing job opportunities due to how important previous project experience is for employers, especially project experience in team environments.",
 		  "BudCode is an online platform that allows software developers, at any level (novice students to seasoned professionals), to connect and collaborate.",
 		  "I primarily worked on the REST API, but assisted the frontend team where necessary."
 		],
@@ -35,11 +35,11 @@
 		  "GitHub"
 		],
 		"img":"budcode.png",
-		"note":"When visiting the site, it may take some time for the first request to process, especially when the site hasn't been visited in a while. Being in the free tier comes with a price."
+		"note":"When visiting the site, it may take some time for the first request to process, especially when the site hasn't been visited in a while. Services may not be up entirely. Being in the free tier comes with a price."
 	  },
 	  {
 		"name":"Sylica",
-		"description":"Sylica is an e-commerce platform for electronic devices. I primarily worked on the frontend service of the application.",
+		"description":"Sylica is an e-commerce platform for electronic devices. I primarily worked on the frontend, client-side view of the application.",
 		"links":[
 		  {
 			"name":"site",
@@ -69,7 +69,7 @@
 		  "Figma"
 		],
 		"img":"sylica.png",
-		"note":"When visiting the site, it may take some time for the first request to process, especially when the site hasn't been visited in a while. Being in the free tier comes with a price."
+		"note":"When visiting the site, it may take some time for the first request to process, especially when the site hasn't been visited in a while. Services may not be up entirely. Being in the free tier comes with a price."
 	  },
 	  {
 		"name":"Gamedia",
@@ -93,7 +93,7 @@
 			"GitHub"
 		],
 		"img": "gamedia.png",
-		"note": "The repo contains both the client and server applications, but I worked solely on the REST API."
+		"note": "The repo contains both the client and server applications, but I worked solely on the REST API. Services may not be up entirely."
 	  },
 	  {
 		"name":"Collegefulbar",
@@ -120,7 +120,7 @@
 			"GitHub"
 		],
 		"img": "collegefulbar.png", 
-		"note": "The repo contains both frontend and backend code, but I worked solely on the backend portion in dealing with the database."
+		"note": "The repo contains both frontend and backend code, but I worked solely on the backend portion."
 	  },
 	  {
 		"name":"Instagram Insights [EOL]",
@@ -193,8 +193,8 @@
 	  {
 		"name":"Brindle",
 		"descriptionLines":[
-		  "This project was my team's submission for HackCooper2019. For most of us, it was our first hackathon.",
-		  "Our idea was to create a website that converts books written in English to books written in braille and contains a library of books already written in braille. In order to do this, we created braille translators (one in C++ and the other in JavaScript, HTML, and CSS).",
+		  "This project was my team's submission for HackCooper2019. For most of the team, it was our first hackathon.",
+		  "Our idea was to create a website that converts books written in English to books written in braille. This website would also contain a library of books already written in braille. In order to do this, we created braille translators (one in C++ and the other in JavaScript, HTML, and CSS).",
 		  "These translators simply convert user input in English to Grade 2 Braille."
 		],
 		"links": [
@@ -221,7 +221,7 @@
 	  {
 		"name":"GroupMaker",
 		"descriptionLines":[
-		  "During my time at All Star Code, we were often being placed in groups, and I noticed it could be done more easily.",
+		  "During my time at All Star Code, we were often being placed in groups, and I noticed the process could have been done more efficient.",
 		  "I created this program that converts a list of names from user input to random groups based on user preference."
 		],
 		"links": [

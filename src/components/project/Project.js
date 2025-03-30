@@ -35,7 +35,7 @@ const Project = ({ project, order }) => {
         {mainStack && (
           <Row>
             {otherStack && (
-              <Col xs={2}>
+              <Col xs={1}>
                 <p className='m-0'>Main</p>
               </Col>
             )}
@@ -58,7 +58,7 @@ const Project = ({ project, order }) => {
         )}
         {otherStack && (
           <Row className='pb-2'>
-            <Col xs={2}>
+            <Col xs={1}>
               <p className='m-0'>Other</p>
             </Col>
             <Col>
